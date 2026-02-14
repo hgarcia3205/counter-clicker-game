@@ -1,0 +1,11 @@
+.main-counter-row { 
+    display: flex;
+}
+
+#counter {border: 1px solid grey;}
+
+
+#plus-one-btn {} 
+
+
+#plus-ten-btn {} 
