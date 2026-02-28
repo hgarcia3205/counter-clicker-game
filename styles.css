@@ -1,42 +1,82 @@
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .main-counter-row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-row-group {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
-    display: flex;
-    flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-between;
-    padding-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  gap: 12px;
 }
 
 #start-btn {
-    width: 100%;
+  width: 100%;
 }
 
 #game-start-section {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 160px;
+}
+
+#name-row input {
+  margin-left: 6px;
+}
+
+#duration-row {
+  display: flex;
+  gap: 6px;
 }
 
 #rules-section {
-    max-width: 80px;
-    >p {
-        font-size: 8px;
-    }
+  max-width: 180px;
 }
 
-#countdown {
-    text-align: center;
+/* FIXED: valid plain CSS (no nesting) */
+#rules-section > p {
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+#countdown,
+#round-countdown {
+  text-align: center;
+}
+
+#top-scores-section {
+  min-width: 180px;
+}
+
+#top-scores-list {
+  margin: 6px 0 0 18px;
+  padding: 0;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

@@ -1,60 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Click it!</title>
     <link href="styles.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div id="rules-section">Rules/goals:
-            <p>Use '+,-' buttons to get the current number to fall within range prompted to you.</p>
+      <div id="rules-section">
+        Rules/goals:
+        <p>Use '+,-' buttons to get the current number to fall within range prompted to you.</p>
+        <p>Each round is timed. You can submit early to score faster.</p>
+      </div>
+
+      <div id="game-start-section">
+        <label id="name-row">
+          Name:
+          <input id="player-name" type="text" maxlength="18" placeholder="Player" />
+        </label>
+
+        <div id="duration-row">
+          <button class="duration-btn" data-seconds="30">30s</button>
+          <button class="duration-btn" data-seconds="60">60s</button>
         </div>
-        <div id="game-start-section">
-            <div>
-                <button>30s</button>
-                <button>60s</button>
-            </div>
-            <button id="start-btn">Start</button>
-            <div id="countdown">59s</div>
-        </div>
+
+        <button id="start-btn">Start</button>
+        <button id="pause-btn" disabled>Pause</button>
+
+        <div id="countdown">60s</div>
+        <div id="round-countdown">7s</div>
+      </div>
+
+      <div id="top-scores-section">
         <div style="color: rgb(192, 191, 191)">Top Scores:</div>
-
+        <ol id="top-scores-list"></ol>
+      </div>
     </header>
+
     <main>
+      <div>Current points: <span id="current-points">0</span></div>
+      <div>Current task: <span id="current-task">Press Start to begin.</span></div>
 
-        <div>Current points: <span id="current-points">0</span></div>
-        <div>Current task: <span id="current-task">Placeholder text</span></div>
+      <button id="submit-round-btn" disabled>Submit Round Early</button>
 
-        <div class="main-counter-row main-row-group">
-            <button id="plus-one-btn">+1</button>
-            <button id="minus-one-btn">-1</button>
+      <div class="main-counter-row main-row-group">
+        <button id="plus-one-btn">+1</button>
+        <button id="minus-one-btn">-1</button>
 
-            <button id="plus-ten-btn" disabled>+10</button>
-            <button id="minus-ten-btn" disabled>-10</button>
+        <button id="plus-ten-btn" disabled>+10</button>
+        <button id="minus-ten-btn" disabled>-10</button>
 
-            <button id="plus-hundred-btn" disabled>+100</button>
-            <button id="minus-hundred-btn" disabled>-100</button>
+        <button id="plus-hundred-btn" disabled>+100</button>
+        <button id="minus-hundred-btn" disabled>-100</button>
 
-            <button id="reset-count-btn">Reset</button>
-        </div>
+        <button id="reset-count-btn">Reset</button>
+      </div>
 
-        <h4>Current number: <span id="counter">0</span></h4>
+      <h4>Current number: <span id="counter">0</span></h4>
 
-        <div id="boost-shop" class="main-row-group">
-            Buy boosts:
-            <button id="buy-plus-ten-btn">Buy: +10</button>
-            <button id="buy-minus-ten-btn">Buy: -10</button>
-            <button id="buy-plus-hundred-btn">Buy: +100</button>
-            <button id="buy-minus-hundred-btn">Buy: -100</button>
-        </div>
+      <div id="boost-shop" class="main-row-group">
+        Buy boosts:
+        <button id="buy-plus-ten-btn">Buy +10 (3 pts)</button>
+        <button id="buy-minus-ten-btn">Buy -10 (3 pts)</button>
+        <button id="buy-plus-hundred-btn">Buy +100 (10 pts)</button>
+        <button id="buy-minus-hundred-btn">Buy -100 (10 pts)</button>
+      </div>
     </main>
-</body>
 
-<script src="main.js"></script>
-
-
+    <script src="main.js"></script>
+  </body>
 </html>
