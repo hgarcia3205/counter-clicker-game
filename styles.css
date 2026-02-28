@@ -1,11 +1,42 @@
-.main-counter-row { 
+main {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
-#counter {border: 1px solid grey;}
+.main-counter-row {
+    display: flex;
+    flex-direction: row;
+}
 
+header {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    padding-bottom: 16px;
+}
 
-#plus-one-btn {} 
+#start-btn {
+    width: 100%;
+}
 
+#game-start-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
 
-#plus-ten-btn {} 
+#rules-section {
+    max-width: 80px;
+    >p {
+        font-size: 8px;
+    }
+}
+
+#countdown {
+    text-align: center;
+}

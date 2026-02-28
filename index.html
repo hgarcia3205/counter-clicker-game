@@ -3,23 +3,58 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=g, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Click it!</title>
-    <link href="style.css" rel="stylesheet" />
-    <script src="main.js"></script>
+    <link href="styles.css" rel="stylesheet" />
 </head>
 
 <body>
-    <h4>Game is being built...work in progress</h4>
+    <header>
+        <div id="rules-section">Rules/goals:
+            <p>Use '+,-' buttons to get the current number to fall within range prompted to you.</p>
+        </div>
+        <div id="game-start-section">
+            <div>
+                <button>30s</button>
+                <button>60s</button>
+            </div>
+            <button id="start-btn">Start</button>
+            <div id="countdown">59s</div>
+        </div>
+        <div style="color: rgb(192, 191, 191)">Top Scores:</div>
 
+    </header>
+    <main>
 
+        <div>Current points: <span id="current-points">0</span></div>
+        <div>Current task: <span id="current-task">Placeholder text</span></div>
 
-    <div class="main-counter-row">
-        <span id="counter">10</span>
-        <button id="plus-one-btn">+1</button>
-        <button id="plus-ten-btn">+10</button>
-    </div>
+        <div class="main-counter-row main-row-group">
+            <button id="plus-one-btn">+1</button>
+            <button id="minus-one-btn">-1</button>
+
+            <button id="plus-ten-btn" disabled>+10</button>
+            <button id="minus-ten-btn" disabled>-10</button>
+
+            <button id="plus-hundred-btn" disabled>+100</button>
+            <button id="minus-hundred-btn" disabled>-100</button>
+
+            <button id="reset-count-btn">Reset</button>
+        </div>
+
+        <h4>Current number: <span id="counter">0</span></h4>
+
+        <div id="boost-shop" class="main-row-group">
+            Buy boosts:
+            <button id="buy-plus-ten-btn">Buy: +10</button>
+            <button id="buy-minus-ten-btn">Buy: -10</button>
+            <button id="buy-plus-hundred-btn">Buy: +100</button>
+            <button id="buy-minus-hundred-btn">Buy: -100</button>
+        </div>
+    </main>
 </body>
 
-</html>
+<script src="main.js"></script>
 
+
+</html>
